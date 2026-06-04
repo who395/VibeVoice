@@ -137,13 +137,13 @@ We'd like to thank [PsiPi](https://huggingface.co/PsiPi) for sharing an interest
 ### setup
 
 1. install git, astral uv/uvx, this repo
-2. get flash attention from: https://huggingface.co/Jmica/flash_attention/tree/main, the one matching the pyproject.toml
+2. get flash attention from: https://huggingface.co/Jmica/flash_attention/tree/main, the one matching the pyproject.toml (thanks @Jmica, https://www.youtube.com/watch?v=YWGAkfWL6R4)
    - save it in this repo
    - rename it to match the .toml
-3. uv sync
-4. uv run ./demo/gradio_demo.py --model_path microsoft/VibeVoice-1.5B
-5. switch to dark mode
-6. don't stream. it works, but seems to add in ai artifacting
+4. uv sync
+5. uv run ./demo/gradio_demo.py --model_path microsoft/VibeVoice-1.5B
+6. switch to dark mode
+7. don't stream. it works, but seems to add in ai artifacting
 
 ### Usage 1: Launch Gradio demo
 ```bash
