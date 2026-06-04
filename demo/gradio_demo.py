@@ -1263,6 +1263,7 @@ def main():
             default_concurrency_limit=1  # Process one request at a time
         ).launch(
             share=args.share,
+            # share=True, share seems to decrease performance, the ai starts adding weird artifacts to the audio
             # server_port=args.port,
             server_name="0.0.0.0" if args.share else "127.0.0.1",
             show_error=True,

@@ -134,12 +134,26 @@ We observed users may encounter occasional instability when synthesizing Chinese
 
 We'd like to thank [PsiPi](https://huggingface.co/PsiPi) for sharing an interesting way for emotion control. Detials can be found via [discussion12](https://huggingface.co/microsoft/VibeVoice-1.5B/discussions/12).
 
+### setup
+
+1. install git, astral uv/uvx, this repo
+2. get flash attention from: https://huggingface.co/Jmica/flash_attention/tree/main, the one matching the pyproject.toml
+   - save it in this repo
+   - rename it to match the .toml
+3. uv sync
+4. uv run ./demo/gradio_demo.py --model_path microsoft/VibeVoice-1.5B
+5. switch to dark mode
+6. don't stream. it works, but seems to add in ai artifacting
+
 ### Usage 1: Launch Gradio demo
 ```bash
 apt update && apt install ffmpeg -y # for demo
 
 # For 1.5B model
 python demo/gradio_demo.py --model_path microsoft/VibeVoice-1.5B
+
+# actually:
+uv run ./demo/gradio_demo.py --model_path microsoft/VibeVoice-1.5B
 
 # For Large model
 python demo/gradio_demo.py --model_path Jmica/VibeVoice7B
